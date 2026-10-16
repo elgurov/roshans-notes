@@ -1,0 +1,208 @@
+.dashboard__profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 22px 24px;
+  background: linear-gradient(180deg, var(--bg-raised), var(--bg-panel));
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--gold);
+  border-radius: 2px;
+}
+
+.dashboard__title {
+  margin: 0 0 6px;
+  font-size: 1.8rem;
+}
+
+.dashboard__user {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.dashboard__user strong {
+  color: var(--gold);
+  font-family: var(--font-display);
+}
+
+.dashboard__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  font-size: 1.4rem;
+}
+
+.dashboard__count {
+  padding: 2px 10px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.dashboard__empty {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  background: var(--bg-panel);
+  border: 1px dashed var(--border);
+}
+
+.dashboard__empty p {
+  max-width: 46ch;
+  margin: 0;
+}
+
+/* ---------- Список заметок ---------- */
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.note-card {
+  --attr-color: var(--gold);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 16px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--attr-color);
+  border-radius: 2px;
+}
+
+.note-card--str { --attr-color: #e0452d; }
+.note-card--agi { --attr-color: #5f9a3e; }
+.note-card--int { --attr-color: #4d8fd6; }
+.note-card--all { --attr-color: #a07ad8; }
+
+.note-card__title {
+  margin: 0 0 2px;
+  font-size: 1.2rem;
+}
+
+.note-card__hero {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.note-card__hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.note-card__icon {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.note-card__hero-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.note-card__attr {
+  font-weight: 600;
+  color: var(--attr-color);
+}
+
+.note-card__section {
+  display: grid;
+  gap: 2px;
+}
+
+.note-card__label {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--gold);
+}
+
+.note-card__text {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow-wrap: anywhere;
+}
+
+.note-card__items {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.note-card__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.note-card__date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.note-card__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.note-card__actions .btn {
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 400px) {
+  .note-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard__lead {
+  max-width: 52ch;
+  margin: 0 0 10px;
+  color: var(--text-muted);
+}
+
+.note-card__outcome {
+  align-self: flex-start;
+  margin: 0;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+}
+
+.note-card__outcome--killed { color: #ff7a63; }
+.note-card__outcome--survived { color: var(--gold); }
+.note-card__outcome--fled { color: var(--text-muted); }

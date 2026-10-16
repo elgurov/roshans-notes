@@ -1,0 +1,34 @@
+.modal {
+  width: min(440px, calc(100% - 32px));
+  padding: 0;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-raised), var(--bg-panel));
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--dire-bright);
+  border-radius: 2px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+}
+
+.modal::backdrop {
+  background: rgba(4, 5, 7, 0.75);
+}
+
+.modal__body {
+  padding: 24px;
+}
+
+.modal__title {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.modal__message {
+  margin: 0 0 22px;
+  color: var(--text-muted);
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

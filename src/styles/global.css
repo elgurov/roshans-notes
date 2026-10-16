@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans:wght@400;500;600&display=swap');
+
+:root {
+  /* Палитра: тёмный интерфейс клиента Dota 2 */
+  --bg-deep: #0b0d10;
+  --bg-panel: #14171c;
+  --bg-raised: #1c2026;
+  --border: #2a2f37;
+  --text: #d6d9de;
+  --text-muted: #8b919b;
+  --gold: #c9a24b;
+  --gold-soft: #8a6d2f;
+  --dire: #b3321f;
+  --dire-bright: #e0452d;
+  --radiant: #5f9a3e;
+
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'Noto Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --header-h: 68px;
+  --content-w: 1160px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background-color: var(--bg-deep);
+  background-image:
+    radial-gradient(ellipse at 50% -10%, rgba(179, 50, 31, 0.14), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(201, 162, 75, 0.06), transparent 50%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #f0e6cf;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--gold);
+}
+
+a:hover {
+  color: #e6c36e;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

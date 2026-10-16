@@ -1,0 +1,189 @@
+.explore__head {
+  margin-bottom: 24px;
+}
+
+.explore__title {
+  margin: 0 0 6px;
+  font-size: 2rem;
+}
+
+.explore__lead {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* ---------- Фильтры ---------- */
+.explore__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.chip {
+  padding: 8px 16px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.chip:hover {
+  color: #f0e6cf;
+  border-color: var(--gold-soft);
+}
+
+.chip--active {
+  color: #f0e6cf;
+  background: var(--bg-raised);
+  border-color: var(--gold);
+  box-shadow: inset 0 -2px 0 var(--dire-bright);
+}
+
+.explore__count {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.explore__empty {
+  padding: 28px;
+  text-align: center;
+  color: var(--text-muted);
+  background: var(--bg-panel);
+  border: 1px dashed var(--border);
+}
+
+/* ---------- Загрузка ---------- */
+.explore__loading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.explore__loading p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* ---------- Ошибка / отмена ---------- */
+.explore__message {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 28px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-raised), var(--bg-panel));
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--gold);
+  border-radius: 2px;
+}
+
+.explore__message--error {
+  border-top-color: var(--dire-bright);
+}
+
+.explore__message h2 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.explore__message p {
+  margin: 0 0 20px;
+  color: var(--text-muted);
+}
+
+/* ---------- Сетка героев ---------- */
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-card {
+  --attr-color: var(--gold);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-bottom: 3px solid var(--attr-color);
+  border-radius: 2px;
+}
+
+.hero-card--str { --attr-color: #e0452d; }
+.hero-card--agi { --attr-color: #5f9a3e; }
+.hero-card--int { --attr-color: #4d8fd6; }
+.hero-card--all { --attr-color: #a07ad8; }
+
+.hero-card__media {
+  aspect-ratio: 16 / 9;
+  background: #0d0f13;
+}
+
+.hero-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card__fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--attr-color);
+}
+
+.hero-card__body {
+  padding: 12px 14px 14px;
+}
+
+.hero-card__name {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.hero-card__attr {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--attr-color);
+}
+
+.hero-card__meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Скелетон ---------- */
+.hero-card--skeleton {
+  min-height: 210px;
+  background: linear-gradient(
+    100deg,
+    var(--bg-panel) 30%,
+    var(--bg-raised) 50%,
+    var(--bg-panel) 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
